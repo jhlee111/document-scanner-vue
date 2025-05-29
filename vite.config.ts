@@ -20,6 +20,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
       formats: ["es", "cjs"],
     },
+    cssCodeSplit: false,
     rollupOptions: { 
       external: [
         "vue", 
@@ -33,13 +34,13 @@ export default defineConfig({
           jspdf: "jsPDF",
           "@vueuse/core": "VueUse",
           "@jhlee111/vue-opencv-composable": "VueOpenCVComposable"
-        } 
+        },
+        inlineDynamicImports: true,
       },
     },
     sourcemap: true,
     minify: "esbuild",
     emptyOutDir: true,
-    cssCodeSplit: false,
   },
   resolve: {
     alias: {
