@@ -1,6 +1,6 @@
 {
   "name": "document-scanner-vue",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Vue 3 Document Scanner with OpenCV.js - Mobile optimized with camera/gallery support",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
