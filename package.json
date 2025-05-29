@@ -1,0 +1,100 @@
+{
+  "name": "document-scanner-vue",
+  "version": "0.4.0",
+  "description": "Vue 3 Document Scanner with OpenCV.js - Mobile optimized with camera/gallery support",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config.dev.ts",
+    "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.build.json",
+    "preview": "vite preview --config vite.config.dev.ts",
+    "test": "vitest --run tests/unit tests/component",
+    "test:unit": "vitest --run tests/unit",
+    "test:component": "vitest --run tests/component",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:debug": "playwright test --debug",
+    "test:watch": "vitest tests/unit tests/component",
+    "test:unit:watch": "vitest tests/unit",
+    "test:component:watch": "vitest tests/component",
+    "test:ui": "vitest --ui tests/unit tests/component",
+    "test:coverage": "vitest --coverage tests/unit tests/component",
+    "test:all": "npm run test && npm run test:e2e",
+    "test:fixtures": "node scripts/generate-test-fixtures.js",
+    "lint": "eslint src --ext .vue,.ts,.js",
+    "type-check": "vue-tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "analyze": "npm run build && open dist/stats.html",
+    "size": "npm run build --silent && du -sh dist/* | sort -hr"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "document-scanner",
+    "opencv",
+    "pdf",
+    "mobile",
+    "camera",
+    "typescript",
+    "image-processing",
+    "perspective-correction"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/document-scanner-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/document-scanner-vue/issues"
+  },
+  "homepage": "https://github.com/yourusername/document-scanner-vue#readme",
+  "peerDependencies": {
+    "vue": "^3.4.0",
+    "jspdf": "^3.0.0",
+    "@vueuse/core": "^13.0.0"
+  },
+  "dependencies": {
+    "@jhlee111/vue-opencv-composable": "file:../vue-opencv-composable",
+    "nanoid": "^4.0.1"
+  },
+  "devDependencies": {
+    "@opencvjs/types": "^4.11.0-release.1",
+    "@playwright/test": "^1.52.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^22.15.21",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "^3.1.4",
+    "@vue/test-utils": "^2.3.2",
+    "@vue/tsconfig": "^0.5.1",
+    "canvas": "^3.1.0",
+    "eslint": "^8.14.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "jsdom": "^26.1.0",
+    "lucide-vue-next": "^0.511.0",
+    "rollup-plugin-visualizer": "^6.0.1",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^19.3.0",
+    "unplugin-icons": "^22.1.0",
+    "vite": "^5.2.0",
+    "vitest": "^3.1.4",
+    "vue": "^3.4.21",
+    "vue-tsc": "^2.0.6"
+  }
+}
