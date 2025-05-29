@@ -57,12 +57,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/document-scanner-vue.git"
+    "url": "git+https://github.com/jhlee111/document-scanner-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/document-scanner-vue/issues"
+    "url": "https://github.com/jhlee111/document-scanner-vue/issues"
   },
-  "homepage": "https://github.com/yourusername/document-scanner-vue#readme",
+  "homepage": "https://github.com/jhlee111/document-scanner-vue",
   "peerDependencies": {
     "vue": "^3.4.0",
     "jspdf": "^3.0.0",
