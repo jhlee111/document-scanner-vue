@@ -25,8 +25,7 @@ export default defineConfig({
       external: [
         "vue", 
         "jspdf",
-        "@vueuse/core",
-        "@jhlee111/vue-opencv-composable"
+        "@vueuse/core"
       ], 
       output: { 
         globals: { 
