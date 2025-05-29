@@ -1,3 +1,6 @@
+<img src="./pics/scanner.jpeg" alt="Take Back Your Brain book cover" width="200" />
+<img src="./pics/corners.png" alt="Corners" width="200" />
+
 # Vue 3 DocumentScanner Component
 
 A comprehensive Vue 3 component for document scanning with OpenCV.js integration, featuring mobile-optimized camera access, image processing, corner detection, and PDF generation.
